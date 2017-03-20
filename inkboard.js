@@ -37,11 +37,11 @@ function Inkboard(canvas, option) {
 }
 
 Inkboard.prototype.clear = function () {
-  this.ctx.clearRect(0, 0, this.width, this.height)
+  this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
   this.paths = []
 }
 Inkboard.prototype.repaintAll = function () {
-  this.ctx.clearRect(0, 0, this.width, this.height)
+  this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
   for (var id in this.paths)
     if (this.paths.hasOwnProperty(id)) {
       this.pathRepaint(id)
