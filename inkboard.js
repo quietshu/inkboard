@@ -46,7 +46,7 @@ Inkboard.prototype.repaintAll = function (noclear) {
   }
   for (var id in this.paths)
     if (this.paths.hasOwnProperty(id)) {
-      this.pathRepaint(id)
+      this.pathPaint(id, 0)
     }
 }
 Inkboard.prototype.pathPaint = function (id, start) {
