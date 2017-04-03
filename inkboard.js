@@ -55,6 +55,8 @@ Inkboard.prototype.pathPaint = function (id, start) {
     this.ctx.strokeStyle = this.paths[id].color
     this.ctx.shadowColor = this.paths[id].color
     this.ctx.lineWidth = this.paths[id].thickness
+    this.ctx.lineJoin = 'round'
+    this.ctx.lineCap = 'round'
   }
   var points = this.paths[id].points
 
